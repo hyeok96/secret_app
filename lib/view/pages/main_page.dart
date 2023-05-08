@@ -11,23 +11,26 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text("비밀 듣는 고양이"),
-          ListTile(
-            title: const Text("비밀보기"),
-            onTap: () => Get.toNamed(SecretPage.routes),
-          ),
-          ListTile(
-            title: const Text("비밀올리기"),
-            onTap: () => Get.toNamed(UploadPage.routes),
-          ),
-          ListTile(
-            title: const Text("앱설정"),
-            onTap: () => Get.toNamed(SettingPage.routes),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("비밀 듣는 고양이"),
+            ListTile(
+              title: const Text("비밀보기"),
+              onTap: () => Get.toNamed(SecretPage.routes),
+            ),
+            ListTile(
+              title: const Text("비밀올리기"),
+              onTap: () => Get.toNamed(UploadPage.routes),
+            ),
+            ListTile(
+              title: const Text("앱설정"),
+              onTap: () => Get.toNamed(SettingPage.routes),
+            ),
+          ],
+        ),
       ),
     );
   }
